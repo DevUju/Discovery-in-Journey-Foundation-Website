@@ -1,26 +1,98 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f9fc;
-    margin: 0;
-    padding: 2rem;
-  }
-  
-  h1 {
-    color: #3c3c3c;
-  }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.5rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #004d40; /* Deep teal */
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 70px;       /* Smaller size */
+  width: 70px;        /* Match height so it's a perfect circle */
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover;  /* Ensures the image fills the circle */
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links .nav-item {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links .nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links .nav-item a:hover {
+  color: #80cbc4; /* Light teal on hover */
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.7)),
+              url('/assets/bgd.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+}
+
+.summary {
+  text-align: justify;
+  padding: 40px 40px;
+  font-size: 1.5rem;
+  background-color: aliceblue;
+  color: black;
+}
+
+.summary p {
+  color: #333333;       /* Dark gray for good readability */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 20px auto;
+  max-width: 900px;     /* Keeps text from stretching too wide */
+  text-align: justify;  /* Neat, book-like alignment */
+}
