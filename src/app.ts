@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import pagesRouter from './routes/pages.js'; // <-- note the .js
+import pagesRouter from './routes/pages';
 
 // Recreate __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -24,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', pagesRouter);
-app.get('/', (req, res) => res.render('home'));
 app.get('/contact', (req, res) => res.render('contact'));
 
 app.post('/contact', (req, res) => {

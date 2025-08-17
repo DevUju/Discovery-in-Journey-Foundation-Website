@@ -65,10 +65,13 @@ nav {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  margin-top: 0;
 }
 
 .hero p {
   font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
 }
 
 /* ===== FOOTER ===== */
@@ -81,18 +84,20 @@ footer {
 }
 
 .summary {
-  text-align: justify;
-  padding: 40px 40px;
-  font-size: 1.5rem;
+  display: flex;             /* ✅ Flex applied here */
+  justify-content: space-between;
+  gap: 20px;                 /* space between paragraphs */
+  padding: 40px;
   background-color: aliceblue;
   color: black;
 }
 
 .summary p {
-  color: #333333;       /* Dark gray for good readability */
+  flex: 1;                   /* ✅ paragraphs share space equally */
+  color: #333333;
   font-size: 1rem;
   line-height: 1.6;
-  margin: 20px auto;
-  max-width: 900px;     /* Keeps text from stretching too wide */
-  text-align: justify;  /* Neat, book-like alignment */
+  margin: 0;                 /* remove auto-centering margin */
+  text-align: justify;
+  max-width: none;           /* let flex control the width */
 }

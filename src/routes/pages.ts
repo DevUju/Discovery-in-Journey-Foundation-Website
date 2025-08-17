@@ -14,6 +14,10 @@ router.get('/mission', (req, res) => {
   res.render('mission');
 });
 
+router.get('/vision', (req, res) => {
+  res.render('vision');
+});
+
 router.get('/programs', (req, res) => {
   res.render('programs');
 });
