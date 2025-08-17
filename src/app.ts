@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import pagesRouter from './routes/pages';
+import pagesRouter from './routes/pages.js';
 
 // Recreate __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
